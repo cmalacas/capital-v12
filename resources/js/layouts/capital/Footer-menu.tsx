@@ -1,8 +1,12 @@
+import facebook from '@/images/facebook-login.svg';
+import xlogin from '@/images/x-login.svg'
+import youtube from '@/images/youtube-login.svg'
+
 export default function FooterMenu() {
 
     return (
-
-        <div className="section footer">       
+        
+      <div className="section footer">       
         <div className="container">
           <div className="w-row">
             <div className="footer-column w-col w-col-4">
@@ -106,13 +110,13 @@ export default function FooterMenu() {
                   <h4 className="follow-us">Follow Us</h4>
                   <div className="social-link-box">
                     <a href="https://www.facebook.com/Capital-Office-260021917429768/" target="_blank" className="social-link w-inline-block">
-                      <img src="/images/facebook-login.svg" loading="lazy" height="" alt="Find us on Facebook" />
+                      <img src={facebook} loading="lazy" height="" alt="Find us on Facebook" />
                     </a>
                     <a href="https://twitter.com/CapitalOffice71" target="_blank" className="social-link w-inline-block">
-                      <img src="/images/x-login.svg" loading="lazy" height="" alt="Twitter channel" />
+                      <img src={xlogin} loading="lazy" height="" alt="Twitter channel" />
                     </a>
                     <a href="https://www.youtube.com/channel/UCcDG2o7DEW_CTeF73h-5fhw" target="_blank" className="social-link w-inline-block">
-                      <img src="/images/youtube-login.svg" loading="lazy" height="" alt="Youtube channel" />
+                      <img src={youtube} loading="lazy" height="" alt="Youtube channel" />
                     </a>
                   </div>
                 </div>

@@ -1,3 +1,9 @@
+import CompaniesHouseSvg from '@/images/companies-house.svg';
+import SafeNSecure from '@/images/safe-n-secure.svg';
+import TrustPilot from '@/images/trustpilot.svg';
+import Stripe from '@/images/stripe-3.svg';
+import google from '@/images/google-2015.svg';
+import paypal from '@/images/paypal-3.svg';
 export default function FooterLogos() {
 
     return (
@@ -6,22 +12,22 @@ export default function FooterLogos() {
             <div className="container">
                 <div className="logos">
                     <div>
-                        <img src="/images/safe-n-secure.svg" />
+                        <img src={SafeNSecure} />
                     </div>
                     <div>
-                        <img src="/images/trustpilot.svg" />
+                        <img src={TrustPilot} />
                     </div>
                     <div>
-                        <img src="/images/companies-house.svg" />
+                        <img src={ CompaniesHouseSvg } />
                     </div>
                     <div>
-                        <img src="/images/stripe-3.svg" />
+                        <img src={Stripe} />
                     </div>
                     <div>
-                        <img src="/images/google-2015.svg" />
+                        <img src={google} />
                     </div>
                     <div>
-                        <img src="/images/paypal-3.svg" />
+                        <img src={paypal} />
                     </div>
                 </div>
             </div>

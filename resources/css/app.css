@@ -156,4 +156,109 @@
     body {
         @apply bg-background text-foreground;
     }
+
+    .main {
+        color: #404040;
+        line-height: 1.7em;
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1440px;
+        width: 100%;
+        padding-right: 7.5px;
+        padding-left: 7.5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .nav-menu {
+        margin-top: 0;
+    }
+    
+    .w-nav-menu {
+        float: right;
+        position: relative;
+    }
+    
+    .navlink {
+        padding-bottom: 20px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .w-nav-link {
+        vertical-align: top;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+    }
+
+    .topbar {
+        background-color: #f4f8fa;
+        position: relative;
+    }
+
+    .phone-text {
+        font-weight: 400;
+        line-height: 2.5;
+        background-image: url(/images/phone-call.svg);
+        float:right;
+        text-align: right;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 40px;
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: 0%;
+    }
+
+    .w-clearfix:before {
+        content: " ";
+        display: table;
+    }
+
+    .w-clearfix:after {
+        clear:both;
+        content: " ";
+        display: table;
+    }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+    }
+
+    .brand-logo {
+        margin-top: -55px;
+    }
+
+    .w-nav-brand {
+        float: left;
+        color: #333;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .w-dropdown {
+        text-align: left;
+        z-index: 900;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        position: relative;
+    }
+
+    .w-dropdown-list {
+        display: none;
+    }
 }

@@ -1,4 +1,4 @@
-import AppLogoIcon from '@/components/app-logo-icon';
+
 import { type PropsWithChildren } from 'react';
 
 import Header from '@/layouts/capital/Header';
@@ -10,9 +10,9 @@ interface AuthLayoutProps {
     description?: string;
 }
 
-export default function CapitalLayout({ children, title, description }: PropsWithChildren<AuthLayoutProps>) {
+export default function CapitalLayout({ children }: PropsWithChildren<AuthLayoutProps>) {
     return (
-            <div>
+            <div className="main">
                 <Header />
 
                 
