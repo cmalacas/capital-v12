@@ -2,9 +2,6 @@
 
 @plugin 'tailwindcss-animate';
 
-@source '../views';
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -201,6 +198,7 @@
     .topbar {
         background-color: #f4f8fa;
         position: relative;
+        overflow:  hidden;
     }
 
     .phone-text {
@@ -261,4 +259,98 @@
     .w-dropdown-list {
         display: none;
     }
+}
+
+.flash-bar {
+    z-index: 99;
+    background-color: #d30d5f;
+    color: #fff;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    position: sticky;
+    top: 0;
+}
+
+.top-header-angle {
+    background-color: #fff;
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    inset: 0% auto auto 0%;
+}
+
+.top-header-angle-shape {
+    background-color: #f8f8fa;
+    width: 80px;
+    height: 120px;
+    position: absolute;
+    inset: 0% 0% auto auto;
+    transform: translate(10px, -54px) rotate(-47deg);
+}
+
+.container {
+    max-width: 1430px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.top-header-inner {
+    justify-content: flex-end;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    position: relative;
+}
+
+.top-header-list {
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+.top-header-contact {
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    align-items: center;
+    line-height: 1.4rem;
+    display: flex;
+}
+
+.top-header-contact-value {
+    font-weight: 600;
+}
+
+.top-email-btn.outline-btn {
+    border: solid 1px #d30d5f;
+    background-color: #fff;
+    color: #d30d5f;
+}
+
+.top-email-btn.outline-btn:hover {
+    border-color: #404040;
+    background-color: #404040;
+    color: #fff;
+}
+
+.top-email-btn.teal-border:hover {
+    border-color: #404040;
+    background-color: #404040;
+    color: #fff;
+}
+
+.top-email-btn {
+    border: 1px solid #d30d5f;
+    background-color: #d30d5f;
+    color: #fff;
+    border-radius: 40px;
+    padding: 6px 20px;
+    line-height: 1.4rem;
+    text-decoration: none;
+    display: inline-block;
 }
