@@ -1,100 +1,230 @@
-export default function Menu() {
-  return (
-    <nav 
-      role="navigation"
-      className="nav-menu w-nav-menu"
-    >
-        <a 
-          href="https://www.yourvirtualofficelondon.co.uk/" 
-          aria-current="page"
-          className="navlink home w-nav-link w--current">Home
-        </a>
-          
-        <a 
-          href="https://www.yourvirtualofficelondon.co.uk/pricing" 
-          className="navlink w-nav-link">Pricing
-        </a>
+import React, {useState, useEffect, createElement} from "react";
 
-        <div data-hover="true" data-delay="0" className="w-dropdown">
-            <div className="navlink w-dropdown-toggle">
-              <div className="icon w-icon-dropdown-toggle"></div>
-              <div>Services</div>
-            </div>
-            
-            <nav className="mega-menu w-dropdown-list">
-              <div className="w-row">
-                <div className="nopad w-col w-col-3 w-col-medium-6 w-col-small-small-stack">
-                  <h4 className="mega-menu-header">Address Services</h4>
-                  
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/registered-office-address"
-                  className="dropdown-link w-dropdown-link">Registered Office</a>
-                  
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/mail-forwarding-service" 
-                  className="dropdown-link w-dropdown-link">London Office Address</a>
+import {
+   Navbar,
+   Collapse,
+   Typography,
+   IconButton,
+   List,
+   ListItem,
+   Menu,
+   MenuHandler,
+   MenuList,
+   MenuItem
+} from "@material-tailwind/react";
 
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/directors-address"
-                  className="dropdown-link w-dropdown-link">Officers Service Address London</a>
-                </div>
+import {
+  ChevronDownIcon,
+  Bars3Icon,
+  XMarkIcon
+} from "@heroicons/react/24/outline";
 
-                <div className="nopad w-col w-col-3 w-col-medium-6 w-col-small-small-stack">
-                  <h4 className="mega-menu-header">Call Answering</h4>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/voicemail-service"  className="dropdown-link w-dropdown-link">Voicemail Only Service</a>
+import {
+  Bars4Icon,
+  GlobeAmericasIcon,
+  NewspaperIcon,
+  PhoneIcon,
+  RectangleGroupIcon,
+  SquaresPlusIcon,
+  SunIcon,
+  TagIcon,
+  UserGroupIcon
+} from "@heroicons/react/24/solid";
 
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/call-answering-service"  className="dropdown-link w-dropdown-link">Call Answering Service</a>
 
-                  <h4 className="mega-menu-header">Virtual Office</h4>
-
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/virtual-office-service"  className="dropdown-link w-dropdown-link">Complete Virtual Office</a>
-                </div>
-
-                <div className="nopad w-col w-col-3 w-col-medium-6 w-col-small-small-stack">
-                  
-                  <h4 className="mega-menu-header">Company Formation</h4>
-                  
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/online-limited-company-formation"  className="dropdown-link w-dropdown-link">Limited Company Formation</a>
-
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/llp-company-formation-service" className="dropdown-link w-dropdown-link">LLP Company Formation</a>
-
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/ltd-by-guatrantee-company-formation" className="dropdown-link w-dropdown-link">Ltd By Guarantee Company Formation</a>
-                </div>
-
-                <div className="nopad w-col w-col-3 w-col-medium-6 w-col-small-small-stack">
-                  <h4 className="mega-menu-header">Other Services</h4>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/meeting-room-hire-london" className="dropdown-link w-dropdown-link">Meeting Room Hire London</a>
-
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/business-accounting-service" className="dropdown-link w-dropdown-link">Business Accounting</a>
-
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/get-a-uk-business-bank-account" className="dropdown-link w-dropdown-link">Free Business Banking</a>
-
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/uk-business-website-design" className="dropdown-link w-dropdown-link">UK Business Webdesign</a>
-                </div>
-              </div>
-            </nav>
-        </div>
-
-        <div data-hover="true" data-delay="0" className="w-dropdown">
-          <div className="navlink w-dropdown-toggle">
-            <a href="https://www.yourvirtualofficelondon.co.uk/faqs" className="navlink-drop w-inline-block">
-              <div className="icon w-icon-dropdown-toggle"></div>
-              <div>FAQs</div>
-            </a>
+const navListMenuItems = [
+  {
+    title: "Products",
+    description: "Find the perfect solution for your needs.",
+    icon: SquaresPlusIcon,
+  },
+  {
+    title: "About Us",
+    description: "Meet and learn about our dedication",
+    icon: UserGroupIcon,
+  },
+  {
+    title: "Blog",
+    description: "Find the perfect solution for your needs.",
+    icon: Bars4Icon,
+  },
+  {
+    title: "Services",
+    description: "Learn how we can help you achieve your goals.",
+    icon: SunIcon,
+  },
+  {
+    title: "Support",
+    description: "Reach out to us for assistance or inquiries",
+    icon: GlobeAmericasIcon,
+  },
+  {
+    title: "Contact",
+    description: "Find the perfect solution for your needs.",
+    icon: PhoneIcon,
+  },
+  {
+    title: "News",
+    description: "Read insightful articles, tips, and expert opinions.",
+    icon: NewspaperIcon,
+  },
+  {
+    title: "Products",
+    description: "Find the perfect solution for your needs.",
+    icon: RectangleGroupIcon,
+  },
+  {
+    title: "Special Offers",
+    description: "Explore limited-time deals and bundles",
+    icon: TagIcon,
+  },
+];
+ 
+function NavListMenu() {
+  const [isMenuOpen, setIsMenuOpen] = useState( false );
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState( false );
+  const renderItems = navListMenuItems.map(
+    ({ icon, title, description }, key) => (
+      <a href="#" key={key}>
+        <MenuItem className="flex items-center gap-3 rounded-lg">
+          <div className="fex items-center justify-center rounder-lg !bg-blue-gray-50 p-2">
+            {" "}
+            {createElement(icon, {
+              strokeWidth: 2,
+              className: "h-6 text-gray-900 w-6"
+            })}
           </div>
+          <div>
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="flex items-center text-sm font-bold"
+            >
+              {title}
+            </Typography>
+            <Typography
+              variant="paragraph"
+              className="text-xs !font-medium text-blue-gray-500"
+            >
+              {description}
+            </Typography>
+          </div>
+        </MenuItem>
+      </a>
+    )
+  );
 
-          <nav className="dropdown-list w-dropdown-list">
-            <a href="https://www.yourvirtualofficelondon.co.uk/about-us"
-            className="dropdown-link single w-dropdown-link">About Us</a>
+  return (
+    <>
+      <Menu
+        open={isMenuOpen}
+        handler={setIsMenuOpen}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+      >
+        <MenuHandler>
+          <Typography
+            as="div"
+            variant="small"
+            className="font-medium"
+          >
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4 font-meidum text-gray-900"
+              selected={ isMenuOpen || isMobileMenuOpen}
+              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+            >
+              Resources
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`hidden h-3 w-3 trasition-transform lg:block ${ isMenuOpen ? "rotate-180" : "" } `}
+              />
+              <ChevronDownIcon 
+                strokeWidth={2.5}
+                className={`hidden h-3 w-3 trasition-transform lg:block ${ isMobileMenuOpen ? "rotate-180" : "" } `}
+              />
+            </ListItem>
+          </Typography>
+        </MenuHandler>
 
-            <a href="https://www.yourvirtualofficelondon.co.uk/contact-capital-office"
-            className="dropdown-link single w-dropdown-link">Contact Us</a>
-          </nav>
+        <MenuList className="hidden max-w-screen-xl rounder-xl lg:block">
+          <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+            { renderItems }
+          </ul>
+        </MenuList>
+
+      </Menu>
+    </>
+  );
+}
+
+function NavList() {
+  return (
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem>
+      </Typography>
+      <NavListMenu />
+      <Typography
+        as="a"
+        href="#"
+        variant="small"
+        color="blue-gray"
+        className="font-medium"
+      > 
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          Contact Us
+        </ListItem>
+      </Typography>
+    </List>
+  )
+}
+export default function Menus() {
+
+  const [openNav, setOpenNav] = useState( false )
+
+  useEffect(() => {
+    window.removeEventListener(
+      "resize", 
+      () => window.innerWidth > 960 && setOpenNav( false ),
+    )
+  }, []);
+
+  return (
+    <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+      <div className="flex item-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          variant="h6"
+          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+        >
+          Material Tailwind
+        </Typography>
+        <div className="hidden lg:block">
+          <NavList />
         </div>
-
-        <a href="https://www.yourvirtualofficelondon.co.uk/blog" className="navlink w-nav-link">Blog</a>
-
-        <a href="https://www.yourvirtualofficelondon.co.uk/resource-centre" className="navlink w-nav-link">Resource Centre</a>
-
-        <a href="https://admin.capital-office.co.uk/login" className="navlink w-nav-link">Login</a>
-
-    </nav>
+        <IconButton
+          variant="text"
+          color="blue-gray"
+          className="lg:hidden"
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {
+            openNav ? (
+                <XMarkIcon className="h-6 w-6" strokeWidth={ 2 } />
+            ) : <Bars3Icon className="h-6 w-6" strokeWidth={ 2 } />
+          }
+        </IconButton>
+      </div>
+      <Collapse open={ openNav }>
+          <NavList />
+      </Collapse>
+    </Navbar>
   );
 }

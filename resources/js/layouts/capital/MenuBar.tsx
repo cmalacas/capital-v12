@@ -1,5 +1,5 @@
 import TopLogo from '@/layouts/capital/TopLogo';
-import Menu from '@/layouts/capital/Menu';
+import Menus from '@/layouts/capital/Menu';
 export default function MenuBar() {
 
     return (
@@ -8,9 +8,13 @@ export default function MenuBar() {
 
         <div className="container">
 
-          <TopLogo />
+          <div className="navbar-inner">
 
-          <Menu />
+            <TopLogo />
+
+            <Menus />
+
+          </div>
 
         </div>
 
