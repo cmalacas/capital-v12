@@ -121,6 +121,7 @@ function NavListMenu() {
         handler={setIsMenuOpen}
         offset={{ mainAxis: 20 }}
         placement="bottom"
+        allowHover={true}
       >
         <MenuHandler>
           <Typography
@@ -140,7 +141,7 @@ function NavListMenu() {
               />
               <ChevronDownIcon 
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 trasition-transform lg:block ${ isMobileMenuOpen ? "rotate-180" : "" } `}
+                className={`block h-3 w-3 trasition-transform lg:hidden ${ isMobileMenuOpen ? "rotate-180" : "" } `}
               />
             </ListItem>
           </Typography>
@@ -167,7 +168,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4 text-gray-900">Home</ListItem>
       </Typography>
       <NavListMenu />
       <Typography
@@ -177,7 +178,7 @@ function NavList() {
         color="blue-gray"
         className="font-medium"
       > 
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
+        <ListItem className="flex items-center gap-2 py-2 pr-4 text-gray-900">
           Contact Us
         </ListItem>
       </Typography>
@@ -202,7 +203,7 @@ export default function Menus() {
           as="a"
           href="#"
           variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          className="mr-4 cursor-pointer py-1.5 lg:ml-2 text-gray-900"
         >
           Material Tailwind
         </Typography>
