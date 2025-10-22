@@ -98,13 +98,13 @@ function NavListMenu() {
             <Typography
               variant="h6"
               color="blue-gray"
-              className="flex items-center text-sm font-bold"
+              className="flex items-center text-sm font-bold text-gray-900"
             >
               {title}
             </Typography>
             <Typography
               variant="paragraph"
-              className="text-xs !font-medium text-blue-gray-500"
+              className="text-xs !font-medium text-gray-900"
             >
               {description}
             </Typography>

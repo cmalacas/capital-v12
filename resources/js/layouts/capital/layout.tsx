@@ -13,13 +13,15 @@ interface AuthLayoutProps {
 
 export default function CapitalLayout({ children }: PropsWithChildren<AuthLayoutProps>) {
     return (
-            <div className="main">
+            <div className="main bg-white">
                 <Flashbar />
                 <Header />
                 
-                {children}
+                Login form header
 
+                <div className="footer-top-spacer"></div>
                 <Footer1 />
+                <div className="footer-top-spacer"></div>
                 <Footer />
 
             </div>
