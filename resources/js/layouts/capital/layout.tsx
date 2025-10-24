@@ -5,6 +5,8 @@ import Header from '@/layouts/capital/Header';
 import Footer from  '@/layouts/capital/Footer';
 import Footer1 from '@/layouts/capital/Footer1';
 import Flashbar from '@/layouts/capital/Flashbar'
+import LoginForm from '@/layouts/capital/LoginForm';
+
 interface AuthLayoutProps {
     name?: string;
     title?: string;
@@ -17,7 +19,7 @@ export default function CapitalLayout({ children }: PropsWithChildren<AuthLayout
                 <Flashbar />
                 <Header />
                 
-                Login form header
+                <LoginForm />
 
                 <div className="footer-top-spacer"></div>
                 <Footer1 />
