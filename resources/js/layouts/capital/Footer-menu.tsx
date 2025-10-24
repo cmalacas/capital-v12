@@ -1,130 +1,172 @@
-import facebook from '@/images/facebook-login.svg';
-import xlogin from '@/images/x-login.svg'
-import youtube from '@/images/youtube-login.svg'
-
 export default function FooterMenu() {
 
     return (
         
-      <div className="section footer">       
-        <div className="container">
-          <div className="w-row">
-            <div className="footer-column w-col w-col-4">
-              <a href="https://www.yourvirtualofficelondon.co.uk/" aria-current="page" className="footer-brand w-inline-block w--current">
-                <img src="https://uploads-ssl.webflow.com/6061bca8343bd7394f600454/606c3fa2f17d0a18b1ea1c9d_footer_logo.png" loading="lazy" alt="Capital Office logo white" />
-              </a>
-              <p>We are located in the heart of the<br />world’s leading business capital.</p>
-              <div className="footer-leftbox w-row">
-                <div className="w-col w-col-12 w-col-stack office-hours">
-                  <div className="rt-footer w-richtext">
-                    <h4>Office Hours</h4>
-                    <p>Monday to Friday</p>
-                    <p>09.00 a.m. – 17.00 p.m.</p>                    
+      <section className="site-footer">
+        <div className="footer-main">
+          <div className="w-layout-blockcontainer container w-container">
+            <div className="footer-main-grid">
+              <div className="footer-main-col">
+                <div className="footer-block-group">
+                  <div className="footer-block">
+                    <a href="#" className="footer-brand-logo w-inline-block">
+                      <img src="https://cdn.prod.website-files.com/651c10334cdb8c891f1cdf02/651c10334cdb8c891f1cdf32_footer_logo.png" loading="lazy" alt="Capital Office logo white" />
+                    </a>
+                    <p className="footer-text">We are located in the heart of the world’s leading business capital.</p>
+                  </div>
+                  
+                  <div className="footer-block">
+                    <div className="footer-text-label">Office Hours</div>
+                    <div className="footer-block-content">
+                      <p className="footer-text-sm">Monday to Friday</p>
+                      <p className="footer-text-sm">9am-5pm</p>
+                    </div>
+                  </div>
+                  
+                  <div className="footer-block">
+                    <div className="footer-text-label">Contact</div>
+                    <div className="footer-block-content">
+                      <div className="footer-block-contact">
+                        <p className="footer-text-sm">Telephone:</p>
+                        <p className="footer-text-sm">+44 (0) 207 566 3939</p>
+                      </div>
+                      <div className="footer-block-contact">
+                        <p className="footer-text-sm">E-mail:</p>
+                        <p className="footer-text-sm">info@capital-office.co.uk</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="contact-container">
-                  <h4>Contact</h4>
-                  <p>Telephone&nbsp;&nbsp; +44(0) 207 566 3939</p>
-                  <p>E-mail&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; info@capital-office.co.uk</p>
-                </div>
-                
               </div>
-             
-            </div>
-            <div className="footer-column links w-col w-col-4">
-              <h4 className="our-main-services">Our Main Services</h4>
-              <ul role="list" className="footer-list">
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/call-answering-service" className="footer-link">Call Answering Service</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/company-formation-service" className="footer-link">Company Formations</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/virtual-office-service" className="footer-link">Complete Virtual Offices</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services/meeting-room-hire-london" className="footer-link">Meeting Rooms London</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/services" className="footer-link">View All Services</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/case-studies" className="footer-link">View Client Case Studies</a>
-                </li>
-              </ul>
-
-              <div className="legal">
-                <h4>Legal</h4>
-                <ul>
-                  <li>
-                    <a href="https://www.yourvirtualofficelondon.co.uk/legal/terms-conditions" className="footer-link">Terms &amp; Conditions</a>
-                  </li>
-                  <li>
-                      <a href="https://www.yourvirtualofficelondon.co.uk/legal/privacy-policy" className="footer-link">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="https://www.yourvirtualofficelondon.co.uk/legal/cookie-policy" className="footer-link">Cookie Policy</a>
-                  </li>
-                    
-                    <li>
-                      <a href="https://www.yourvirtualofficelondon.co.uk/legal/website-usage-terms" className="footer-link">Website Usage Terms</a>
-                    </li>
-                </ul>
+              <div className="footer-main-col hide-on-tabs">
+                <div className="footer-divider-line"></div>
               </div>
-            </div>
-            <div className="footer-column links last w-col w-col-4">
-              <h4 className="additional-services">Additional Services</h4>
-              <ul role="list" className="footer-list">
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/mail-forwarding-address" className="footer-link">Mail Forwarding London</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/registered-office-address" className="footer-link">Registered Office</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/business-address" className="footer-link">Business Address</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/po-box-address" className="footer-link">PO Box</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/international-parcel-forwarding-service" className="footer-link">Parcel Forwarding</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/royal-mail-redirection" className="footer-link">Royal Mail Redirection</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/uk-mailing-address" className="footer-link">UK Mailing Address, Mail Address</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/london-street-address" className="footer-link">London Street Address</a>
-                </li>
-                <li>
-                  <a href="https://www.yourvirtualofficelondon.co.uk/virtual-mailing-address" className="footer-link">Virtual Mailing Address</a>
-                </li>
-              </ul>
-
-              <div className="w-col w-col-6 w-col-stack">
-                  <h4 className="follow-us">Follow Us</h4>
-                  <div className="social-link-box">
-                    <a href="https://www.facebook.com/Capital-Office-260021917429768/" target="_blank" className="social-link w-inline-block">
-                      <img src={facebook} loading="lazy" height="" alt="Find us on Facebook" />
-                    </a>
-                    <a href="https://twitter.com/CapitalOffice71" target="_blank" className="social-link w-inline-block">
-                      <img src={xlogin} loading="lazy" height="" alt="Twitter channel" />
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCcDG2o7DEW_CTeF73h-5fhw" target="_blank" className="social-link w-inline-block">
-                      <img src={youtube} loading="lazy" height="" alt="Youtube channel" />
-                    </a>
+              
+              <div className="footer-main-col">
+                <div className="footer-block-group">
+                  <div className="footer-block">
+                    <div className="footer-text-label">Our Main Services</div>
+                    <div className="footer-block-content">
+                      <ul role="list" className="footer-menu">
+                        <li className="footer-menu-item">
+                          <a href="/services/call-answering-service" className="footer-menu-link">Call Answering Service</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/services/virtual-office-service" className="footer-menu-link">Complete Virtual Offices</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/services/meeting-room-hire-london" className="footer-menu-link">Meeting Rooms London</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/services" className="footer-menu-link">View All Services</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/case-studies" className="footer-menu-link">View Client Case Studies</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/partners" className="footer-menu-link">Partners</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="footer-block">
+                    <div className="footer-text-label">Legal</div>
+                    <div className="footer-block-content">
+                      <ul role="list" className="footer-menu">
+                        <li className="footer-menu-item">
+                          <a href="/legal/terms-conditions" className="footer-menu-link">Terms &amp; Conditions</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/legal/privacy-policy" className="footer-menu-link">Privacy Policy</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/legal/cookie-policy" className="footer-menu-link">Cookie Policy</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/legal/website-usage-terms" className="footer-menu-link">Website Usage Terms</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/sitemap" className="footer-menu-link">Sitemap</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div className="footer-main-col hide-on-tabs">
+                <div className="footer-divider-line"></div>
+              </div>
+              <div className="footer-main-col">
+                <div className="footer-block-group">
+                  <div className="footer-block">
+                    <div className="footer-text-label">Additional Services</div>
+                    <div className="footer-block-content">
+                      <ul role="list" className="footer-menu">
+                        <li className="footer-menu-item">
+                          <a href="/register-a-company" className="footer-menu-link">Register a Company</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/change-company-address" className="footer-menu-link">Change Company Address</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/" aria-current="page" className="footer-menu-link w--current">Virtual Office London</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/services/registered-office-address" className="footer-menu-link">Registered Office Address</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/mail-forwarding-uk-address" className="footer-menu-link">Mail Forwarding London</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/registered-office-address" className="footer-menu-link">Registered Office</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/business-address-service" className="footer-menu-link">Business Address</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/po-box-address" className="footer-menu-link">PO Box</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/international-parcel-forwarding-service" className="footer-menu-link">Parcel Forwarding</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/royal-mail-redirection" className="footer-menu-link">Royal Mail Redirection</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/uk-mailing-address" className="footer-menu-link">UK Mailing Address, Mail Address</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/london-street-address" className="footer-menu-link">London Street Address</a>
+                        </li>
+                        <li className="footer-menu-item">
+                          <a href="/virtual-mailing-address" className="footer-menu-link">Virtual Mailing Address</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="footer-block">
+                    <div className="footer-text-label">Follow Us</div>
+                    <div className="footer-block-content">
+                      <div className="footer-social-links">
+                        <a href="https://www.facebook.com/Capital-Office-260021917429768/" target="_blank" className="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/651c10334cdb8c891f1cdf02/653132888a9b700ce0d383ae_facebook-icon.svg" loading="lazy" alt="" className="footer-social-icon" /></a>
+                        <a href="https://twitter.com/CapitalOffice71" target="_blank" className="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/651c10334cdb8c891f1cdf02/6531328e97140b1476e16f9d_twitter-icon.svg" loading="lazy" alt="" className="footer-social-icon" /></a>
+                        <a href="https://www.youtube.com/channel/UCcDG2o7DEW_CTeF73h-5fhw" target="_blank" className="footer-social-link w-inline-block"><img src="https://cdn.prod.website-files.com/651c10334cdb8c891f1cdf02/6531328cb77ec3116f2f6d27_youtube-icon.svg" loading="lazy" alt="" className="footer-social-icon" /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
+        <div className="footer-bottom">
+          <div className="w-layout-blockcontainer container w-container">
+            <div className="footer-copyright">
+              <div className="footer-copyright-text">© Copyright &nbsp;Capital Office Ltd – All Rights Reserved</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     )
 
