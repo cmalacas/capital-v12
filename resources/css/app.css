@@ -559,3 +559,43 @@ p {
     border-radius: 20px;
     background: #fff;
 }
+
+.login-button {
+    background-color: #d30d5f;
+    color: #fff;
+    display: block;
+    width: 100%;
+}
+
+.footer-menu {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;   
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.footer-social-links {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.footer-bottom {
+    background-color: #202020;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-copyright-text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.4rem;
+}

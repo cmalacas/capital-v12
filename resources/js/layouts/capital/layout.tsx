@@ -19,7 +19,7 @@ export default function CapitalLayout({ children }: PropsWithChildren<AuthLayout
                 <Flashbar />
                 <Header />
                 
-                <LoginForm />
+                <LoginForm>{ children }</LoginForm>
 
                 <div className="footer-top-spacer"></div>
                 <Footer1 />
